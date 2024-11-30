@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Disponíveis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+        <img src="./image/logos livros geek.png" alt="Logo da Livraria" class="logo">
+        <h1>GBOOK</h1>
+        </div>
+        <a href="carrinho.html">CARRINHO</a>
+    </header>
+
+    <main>
+        <img src="/image/black friday banner site.png" alt="ban">
+        <!-- Contêiner de Filtro e Livros -->
+        <div class="livros-filtro-container">
+            <!-- Filtro de Categoria -->
+            <div class="filtro-categoria">
+                <label for="categoria">Escolha uma categoria:</label>
+                <select id="categoria">
+                    <option value="fantasia">Fantasia</option>
+                    <option value="ficcaoCientifica">Ficção Científica</option>
+                    <option value="quadrinhos">Quadrinhos</option>
+                </select>
+            </div>
+            <div id="mensagem-sucesso" style="display: none; color: green; margin-top: 10px;"></div>
+            <!-- Contêiner de Livros -->
+            <div id="livros" class="livros-container"></div>
+        </div>
+    </main>
+
+    <script src="js/livros.js"></script>
+</body>
+</html>

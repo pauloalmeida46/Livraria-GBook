@@ -1,0 +1,337 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ede9ef;
+}
+
+header {
+    background-color: #4f0071;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main {
+    margin-top: 0px;
+}
+
+main img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5%;
+    padding: 20px;
+}
+
+/* Estilo da Tabela (Carrinho) */
+table {
+    width: 95%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 2.5%;    
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1eaf01;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #e4e4e4;
+}
+
+button {
+    background-color: #ff3333;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Estilo do Valor Total (Carrinho) */
+#valor-total {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo do botão de finalizar compra */
+#finalizar-compra {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+#finalizar-compra:hover {
+    background-color: #45a049;
+}
+
+/* Estilo das mensagens */
+p#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Layout do Carrinho */
+#carrinho {
+    margin-top: 20px;
+}
+
+#carrinho p {
+    color: #000000;
+}
+
+/* Link de Voltar (Carrinho) */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo específico para a página Livros */
+
+.livros-filtro-container {
+    background-color: #bd91d0c0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.filtro-categoria {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.filtro-categoria label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.filtro-categoria select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.livros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* Card de Livro */
+.card {
+    color: #ede9ef;
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #390052c0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão dentro do card */
+.card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #1c8e06d5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    color: #dfefdb;
+    background-color: #28b60c;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 2%;
+    padding: 8px 13px;
+    border-radius: 4px;
+}
+
+header a:hover {
+    color: #dfefdb;
+    background-color: #126a00;
+    text-decoration: none; 
+}
+
+/* Nova classe para o link "Ir para o Carrinho" */
+header a[href="carrinho.html"] {
+    margin-left: auto;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main img {
+        width: 80%;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .livros-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #finalizar-compra {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* Ajustar o layout do filtro */
+    .livros-filtro-container {
+        padding: 10px;
+    }
+
+    .filtro-categoria {
+        font-size: medium;
+    }
+
+    /* Ajustes nos links de navegação */
+    header a {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main img {
+        width: 90%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    /* Ajuste do tamanho da tabela */
+    table {
+        width: 100%;
+        font-size: 12px; /* Diminui o tamanho da fonte para caber melhor */
+        margin-left: 0; /* Remove a margem esquerda para aproveitar a largura total */
+    }
+
+    table th,
+    table td {
+        padding: 8px; /* Reduz o padding para evitar que a tabela quebre */
+    }
+
+    /* Ajuste da largura das colunas */
+    table img {
+        width: 100%; /* A imagem dentro da tabela também deve se ajustar à tela */
+    }
+
+    /* Estilo para a cabeçalho e células da tabela */
+    table th {
+        font-size: 14px; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+
+    /* Ajuste do valor total */
+    #valor-total {
+        font-size: 1em; /* Reduz o tamanho da fonte do valor total */
+    }
+
+    /* Ajuste do botão de finalizar compra */
+    #finalizar-compra {
+        font-size: 14px; /* Diminui o tamanho da fonte do botão */
+        margin-left: 10%;
+        margin-right: 10%; /* Ajusta as margens para que o botão ocupe mais espaço */
+    }
+
+    /* Ajuste do botão no card de livro */
+    .card button {
+        padding: 6px 12px; /* Diminui o padding do botão para telas menores */
+    }
+}
